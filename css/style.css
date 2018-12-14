@@ -55,19 +55,20 @@ body {
 }
 
 .header2 {
-	background: white;
 	margin: 0 auto;
 	max-width: 1440px;
+	height: 125px;
 	font-family: 'Playfair Display', serif;
 	position: relative;
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	z-index: 2;
 }
 
 .menu1 ul {
 	display: inline-flex;
-    margin: 45px 0 0 75px;
+    margin-left: 75px;
 }
 
 .menu1 ul li{
@@ -80,19 +81,30 @@ body {
     font-weight: bold;
 }
 
+.menu1 ul a:hover {
+	color: orange;
+}
+
 .logo {
 	font-size: 80px;
-    margin: 40px 0 0 200px;
 	font-family: 'KrinkesRegularPERSONAL';
+	text-decoration: none;
+	color: black;
+	position: absolute;
+    top: 40px;
+    left: 45%;
+    transition: 1s;
 }
+
 /*ICON - start*/
+
 .icon_yellow {
 	display: flex;
-	justify-content: space-between;
+	margin-left: 490px;
 }
 
 .icon_yellow div {
-	margin: 50px 12px 0 0;
+	margin: 0 12px 0 0;
 	background: white;
 	border: 1px solid #d9bf8f;
 	border-radius: 50%;
@@ -121,7 +133,7 @@ body {
 /* Всплывающее меню - начало*/
 
 .menu2 {
-    margin: 45px 75px 50px 0px;
+    margin-right: 75px;
     font-family: 'Lato', sans-serif;
     font-size: 12px;
     background: #000;
@@ -132,9 +144,9 @@ body {
 }
 
 .submenu {
-	position: absolute;
-	top: 77px;
-	right: 75px;
+    position: absolute;
+    top: 78px;
+    right: 75px;
     padding: 10px 5px 0px 63px;
     background: #242424;
 	visibility: hidden;
@@ -155,12 +167,21 @@ body {
     color: white;
 }
 
+.li2 a:hover {
+	text-shadow: 0px 0px 8px rgb( 255, 255, 255 );
+}
+
 .li2:after { content: url(../img/arrow1.png);}
 
 
 .submenu li{
 	margin-bottom: 10px
 }
+
+.submenu a:hover {
+	text-shadow: 0px 0px 8px rgb( 255, 255, 255 );
+}
+
 /* Всплывающее меню - конец */
 
 .header3 {
@@ -248,8 +269,7 @@ body {
 }
 
 .shop {
-	background: #f09d66;
-    width: 188px;
+   /* width: 192px;*/
     position: absolute;
     top: 475px;
     left: 640px;
@@ -258,15 +278,17 @@ body {
 }
 
 .shop a {
+	background: #f09d66;
 	text-decoration: none;
 	color: white;
 	position: relative;
+	padding: 10px 30px;
 }
 
 .rhombus1 {
 	background: url(../img/rhombus1.png);
 	position: absolute;
-    top: 166px;
+    top: 165px;
     right: 117px;
 	z-index: 1;
 	width: 20px;
@@ -312,14 +334,14 @@ body {
 .left {
 	position: absolute;
 	top: 50%;
-	left: 75px;
+	left: 1%;
 	z-index: 3;	 
 }
 
 .right {
 	position: absolute;
 	top: 50%;
-    right: 75px;
+    right: 1%;
     z-index: 3;
 }
 
@@ -329,15 +351,15 @@ body {
 	max-width: 1440px;
 	display: flex;
 	justify-content: space-between;
-	position: relative;
 }
 
-.slider1 {
+.slider_left {
 	background: url(../img/arrow-left.png);
 	width: 430px;
 	height: 100px;
 	color: white;
-	margin: 65px 0 0 75px;
+	margin-top: 65px;
+	position: relative;
 }
 
 .icon-airplane:before {
@@ -345,18 +367,19 @@ body {
 	font-size: 48px;
 }
 
-.slider1 > div {
+.slider_left div {
 	position: absolute;
-    top: 88px;
-    left: 110px;
+    top: 25px;
+    left: 25px;
 }
 
-.slider2 {
+.slider_middle {
 	background: url(../img/arrow-middle.png);
 	width: 455px;
 	height: 100px;
 	color: white;
-	margin: 65px -20px 0 -20px;
+	margin-top: 65px;
+	position: relative;
 }
 
 .icon-clock:before {
@@ -364,18 +387,19 @@ body {
 	font-size: 48px;
 }
 
-.slider2 > div {
+.slider_middle div {
 	position: absolute;
-    top: 88px;
-    left: 564px;
+    top: 25px;
+    left: 65px;
 }
 
-.slider3 {
+.slider_right {
 	background: url(../img/arrow-right.png);
 	width: 430px;
 	height: 100px;
 	color: white;
-	margin: 65px 60px 0 0;
+	margin-top: 65px;
+	position: relative;
 }
 
 .icon-lifebuoy:before {
@@ -383,38 +407,38 @@ body {
 	font-size: 48px;
 }
 
-.slider3 > div {
+.slider_right div {
 	position: absolute;
-    top: 88px;
-    left: 1017px;
+    top: 25px;
+    left: 65px;
 }
 
-.slider1 h1 {
+.slider_left h1 {
 	font-size: 30px;
     margin: 20px 0 0 112px;
 }
 
-.slider2 h1 {
+.slider_middle h1 {
 	font-size: 30px;
     margin: 20px 0 0 134px;	
 }
 
-.slider3 h1 {
+.slider_right h1 {
 	font-size: 30px;
 	margin: 20px 0 0 142px;
 }
 
-.slider1 p {
+.slider_left p {
 	font-size: 14px;
     margin: 15px 0 0 112px;
 }
 
-.slider2 p {
+.slider_middle p {
 	font-size: 14px;
     margin: 15px 0 0 134px;	
 }
 
-.slider3 p {
+.slider_right p {
 	font-size: 14px;
 	margin: 15px 0 0 142px;
 }
@@ -432,39 +456,35 @@ body {
 
 .header5 > div h1 {
 	margin: 95px 0 63px 0;
+	transition: 0.5s;
 }
 
+.header5 div h1:hover {
+	transform: scale(1.2);
+	color: orange;
+}
 .line6 {
 	border-top: 1px solid #eaeaea;
 	width: 430px;
-	margin: 110px 0 0 75px;
+	margin-top: 110px;
 }
 
 .line7 {
 	border-top: 1px solid #eaeaea;
 	width: 430px;
-	margin: 110px 60px 0 0;
-}
-
-.header5 div > h1 {
-	transition: 0.5s;
-}
-
-.header5 div > h1:hover {
-	transform: scale(1.2);
-	color: orange;
+	margin-top: 110px;
 }
 
 .rhombus4 {
 	position: absolute;
 	top: 100px;
-    left: 550px;
+    left: 480px;
 }
 
 .rhombus5 {
 	position: absolute;
 	top: 100px;
-    right: 530px;
+    right: 480px;
 }
 
 .header6 {
@@ -473,27 +493,35 @@ body {
 	max-width: 1440px;
 }
 
+.catalog{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	border: 1px solid #eaeaea;
+	margin-bottom: 100px;
+}
+
+.catalog div {
+	display: flex;
+	flex-direction: column;
+}
+
+/*.catalog::after {
+	content: '';
+	width: 100%;
+	order: 0;
+}
+
+.catalog div:nth-child(n + 5) {
+	order: 1;
+}*/
+
+
 .foto1 {
 	background: url(../img/foto1.png);
 	width: 300px;
 	height: 347px;
 	margin: 20px;
-}
-
-#sale {
-	width: 60px; 
-	height:60px;
-	border-radius: 50%;
-	background: orange;
-	position: absolute;
-	top: 18px;
-	left: 16px;
-}
-
-#sale h1 {
-	color: white;
-	font-size: 22px;
-	margin: 17px 10px 10px 10px;
 }
 
 .foto2 {
@@ -515,6 +543,7 @@ body {
 	width: 300px;
 	height: 347px;
 	margin-top: 20px;
+	margin-right: 20px;
 }
 
 .foto5 {
@@ -543,28 +572,7 @@ body {
 	width: 300px;
 	height: 348px;
 	margin-left: 20px;
-}
-
-.catalog{
-	display: flex;
-	flex-wrap: wrap;
-	border: 1px solid #eaeaea;
-	margin: 0 60px 100px 75px;
-}
-
-.catalog div {
-	display: flex;
-	flex-direction: column;
-}
-
-.catalog::after {
-	content: '';
-	width: 100%;
-	order: 0;
-}
-
-.catalog div:nth-child(n + 5) {
-	order: 1;
+	margin-right: 20px;
 }
 
 .foto-effect a {
@@ -596,6 +604,7 @@ body {
 	position: relative;
     border: 1px solid #eaeaea;
     z-index: 1;
+    cursor: pointer;
 }
 
 .foto-effect:after {
@@ -614,7 +623,7 @@ body {
 }
 
 .foto-effect img {
-	transition: 1s;
+	transition: 0.5s;
 }
 
 .foto-effect img:hover {
@@ -622,7 +631,6 @@ body {
 }
 
 .foto-effect img:active {
-	transform: scale(1.0);
 	margin: 50px;
 }
 
@@ -635,15 +643,38 @@ body {
     z-index: 1;
 }
 
+#sale {
+	width: 60px; 
+	height:60px;
+	border-radius: 50%;
+	background: orange;
+	position: absolute;
+	top: 18px;
+	left: 16px;
+	align-items: center;
+}
+
+#sale h1 {
+	color: white;
+	font-size: 22px;
+    margin-top: 20px;
+}
+
 .header7 {
 	background: #141414;
 	margin: 0 auto;
-	max-width: 1440px;
 }
 
 .footer {
 	display: flex;
 	padding-bottom: 115px;
+	margin: 0 auto;
+    width: 1440px;
+}
+
+.list ul li a {
+	text-decoration: none;
+	color: #737373;
 }
 
 .list ul li {
@@ -663,7 +694,7 @@ body {
 	margin-bottom: 0px;
 }
 
-.list ul li:hover {
+.list ul li a:hover {
 	color: orange;
 }
 
@@ -679,11 +710,6 @@ body {
 	display: block;
     margin: 70px 0 0 105px;
 }
-
-
-.connects h1:hover {
-	color: orange;
-} 
 
 .icon-facebook:before {
 	content: "\ea90";
@@ -783,6 +809,7 @@ button {
     margin: 5px;
     font-size: 12px;
     transition: 0.5s;
+    cursor: pointer;
 }
 
 button:hover {
@@ -790,33 +817,38 @@ button:hover {
 	transform: scale(1.2)
 }
 
-.footer2 {
+.bank_conntact {
+	max-width: 1440px;
+	margin: 0 auto;
 	font-size: 11px;
 	color: #323232;
-	margin-left: 105px;
 	line-height: 1.5;
 	position: relative;
+	padding-bottom: 115px;
 }
 
-.card {
-	display: inline-block;
-    margin: 24px 0 0 105px;
-    padding-bottom: 120px;
+.bank_conntact ul {
+    margin-left: 105px;
+}
+
+.button_go_top {
+	position: absolute;
+    top: 20px;
+    right: 40px;
+    transition: 0.5s;
+}
+
+.button_go_top:hover {
+	transform: scale(1.3);
 }
 
 .card img {
 	margin-right: 25px;
 }
 
-.button_top {
-	position: absolute;
-    top: 20px;
-    right: 140px;
-    transition: 0.5s;
-}
-
-.button_top:hover {
-	transform: scale(1.3);
+.card {
+	margin-left: 105px;
+	margin-top: 20px;
 }
 
 
