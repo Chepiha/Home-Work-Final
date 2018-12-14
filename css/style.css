@@ -480,6 +480,21 @@ body {
 	margin: 20px;
 }
 
+#sale {
+	width: 60px; 
+	height:60px;
+	border-radius: 50%;
+	background: orange;
+	position: absolute;
+	top: 18px;
+	left: 16px;
+}
+
+#sale h1 {
+	color: white;
+	font-size: 22px;
+	margin: 17px 10px 10px 10px;
+}
 
 .foto2 {
 	background: url(../img/foto2.png);
